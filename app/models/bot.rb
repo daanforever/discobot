@@ -5,8 +5,16 @@ class ::Bot
     @@connection ||= self.new.async.connect
   end
 
+  def self.token=(value)
+    @@token = value
+  end
+
+  def self.application_id=(value)
+    @@application_id = value
+  end
+
   def connect
-    bot = Discordrb::Bot.new token: 'MjAxODAzNDA1MTkzMjQ4Nzcw.CmTyAw.9nAGnoosON3WVTRr57BRDIPY1RU', application_id: 201803405193248770
+    bot = Discordrb::Bot.new token: Bot::Token, application_id: Bot::ID
 
     Rails.logger.info("Discord bot initialized")
 
