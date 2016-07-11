@@ -1,0 +1,23 @@
+.navbar.navbar-default
+  .container-fluid
+    .navbar-header
+      %button.navbar-toggle.collapsed{"data-target" => ".navbar-collapse", "data-toggle" => "collapse", :type => "button"}
+        %span.sr-only Toggle navigation
+        %span.icon-bar
+        %span.icon-bar
+        %span.icon-bar
+      = link_to content_for?(:title) ? yield(:title) : Rails.application.class.parent_name, root_path, class: "navbar-brand"
+    .collapse.navbar-collapse
+      %ul.nav.navbar-nav
+        -# %li{ active_if('cms') }
+        -#   = link_to t('menu.cms', default: 'CMS'),  cms_path
+        -# %li{ active_if('saml') }
+        -#   = link_to t('menu.saml', default: 'SAML'),  saml_info_path
+        -# %li{ active_if('sudis/api', 'show') }
+        -#   = link_to t('menu.api', default: 'API'),  sudis_api_path
+      %ul.nav.navbar-nav.navbar-right
+        %p.navbar-text Version: 1.3.1
+        %li{ active_if('settings') }
+          = link_to settings_path do
+            %span.glyphicon.glyphicon-cog
+            = t('menu.settings')
