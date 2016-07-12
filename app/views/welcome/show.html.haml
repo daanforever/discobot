@@ -1,4 +1,10 @@
-%h1 Welcome#show
-%p Find me in app/views/welcome/show.html.haml
 
-= link_to "Add bot", "https://discordapp.com/oauth2/authorize?client_id=#{Bot::AppID}&scope=bot&permissions=#{Bot::Pemission}"
+= link_to Bot::AddLink, class: 'btn btn-primary', target: "_blank" do
+  Add bot to Server
+
+.todo
+  %h2 TODO
+  %ul
+    %li Add some feature
+
+= render('disqus')
