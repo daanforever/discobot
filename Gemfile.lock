@@ -164,7 +164,7 @@ GEM
     opus-ruby (1.0.1)
       ffi
     pkg-config (1.1.7)
-    puma (3.4.0)
+    puma (3.12.4)
     rack (2.0.1)
     rack-contrib (1.2.0)
       rack (>= 0.9.1)
